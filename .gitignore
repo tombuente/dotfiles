@@ -1,4 +1,11 @@
 *
-!nvim/
+
+!nvim
 !nvim/*
 nvim/plugin
+
+!i3
+!i3/config
+
+!kitty
+!kitty/kitty.conf
