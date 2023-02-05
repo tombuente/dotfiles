@@ -1,0 +1,67 @@
+* {
+  backgroud-color: #282A2E;
+  foreground-color: #FFFFFF;
+  highlight-color: #F0C674;
+  selected-selected: #373B41;
+  input-color: #373B41;
+
+  font: "monospace 12";
+
+  background-color: transparent;
+  text-color: @foreground-color;
+  vertical-align: 0.5;
+}
+
+window {
+  transparency: "real";
+  background-color: @backgroud-color;
+  border-color: @highlight-color;
+  width: 1000px;
+  padding: 15px;
+  border: 2px;
+}
+
+mainbox {
+  spacing: 15;
+  children: ["inputbar", "listview"];
+}
+
+inputbar {
+  spacing: 25;
+  padding: 15px 20px;
+  background-color: @input-color;
+  children: ["textbox-input-icon", "entry"];
+}
+
+textbox-input-icon {
+  str: "";
+  expand: false;
+}
+
+entry {
+  placeholder: "Search";
+  cursor: text;
+}
+
+listview {
+  columns: 1;
+}
+
+element {
+  padding: 8px;
+  spacing: 10px;
+}
+
+element-icon {
+  size: 16px;
+}
+
+element selected.normal,
+element selected.active {
+  background-color: @selected-selected;
+}
+
+element-text.active {
+  text-color: @highlight-color;
+}
+

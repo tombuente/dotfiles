@@ -1,0 +1,7 @@
+configuration {
+  modi: "window,run,drun,filebrowser";
+  show-icons: true;
+}
+
+@theme "meo"
+
