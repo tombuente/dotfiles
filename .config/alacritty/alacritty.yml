@@ -1,36 +1,6 @@
+import:
+  - ~/.config/alacritty/catppuccin/catppuccin-mocha.yml
+
 font:
-  normal:
-    family: monospace
-    style: Regular
-
-  bold:
-    family: monospace
-    style: Bold
-
-  italic:
-    family: monospace
-    style: Italic
-
-  bold_italic:
-    family: monospace
-    style: Bold Italic
-
-  size: 14
-
-colors:
-  # Default colors
-  primary:
-    background: '0x1e1e1e'
-    foreground: '0xffffff'
-
-  # Normal colors
-  normal:
-    black:      '0x171421'
-    red:        '0xc01c28'
-    green:      '0x26a269'
-    yellow:     '0xa2734c'
-    blue:       '0x12488b'
-    magenta:    '0xa347ba'
-    cyan:       '0x2aa1b3'
-    white:      '0xd0cfcc'
+  size: 12
 
