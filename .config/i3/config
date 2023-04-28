@@ -2,13 +2,6 @@
 # Mod4: Windows Key
 set $mod Mod4
 
-
-# Font
-font pango: monospace 8
-
-# Remove borders but keep titlebar
-#new_window normal 0 px
-
 # Start XDG autostart .desktop files using dex.
 # See also https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
@@ -16,25 +9,11 @@ exec --no-startup-id dex --autostart --environment i3
 # Mouse+$mod to drag floating windows
 floating_modifier $mod
 
-# Move tiling windows via drag & drop by left-clicking into the title bar,
-#  or left-clicking anywhere into the window while holding the floating modifier.
-tiling_drag modifier titlebar
 
-
-# Kill focused window
+# Binds
 bindsym $mod+Shift+q kill
-
-
-# Start a terminal
 bindsym $mod+Return exec --no-startup-id alacritty
-
-
-# Show rofi
 bindsym $mod+d exec --no-startup-id "rofi -modi drun,run -show drun"
-
-
-# Launch Polybar
-exec_always --no-startup-id ~/.config/polybar/launch.sh &
 
 
 # Change focus
@@ -82,7 +61,7 @@ bindsym $mod+Shift+space floating toggle
 # Monitor and workspace
 
 # Get monitor info with `xrandr`
-set $monitor1 "DP-4"
+set $monitor1 "DP-0"
 set $monitor2 "DP-2"
 
 # Workspace names
@@ -155,25 +134,6 @@ bindsym $mod+r mode "resize"
 #default_border pixel 2
 #default_floating_border pixel 0
 
-
-# Wallpaper
-exec_always --no-startup-id nitrogen --restore
-
-
-# Align monitors with autorandr
-#exec_always --no-startup-id autorandr --change
-
-
-# Reset volume
-exec_always --no-startup-id "pactl set-sink-volume @DEFAULT_SINK@ 30%"
-
-
-# Picom Compositor
-exec_always --no-startup-id picom
-
-
-# i3 ctl
-
 # Reload the configuration file
 bindsym $mod+Shift+c reload
 
@@ -183,4 +143,12 @@ bindsym $mod+Shift+r restart
 
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'Exit?' -B 'Yes' 'i3-msg exit'"
+
+
+# Wallpaper
+exec_always --no-startup-id nitrogen --restore
+# Bar
+exec_always --no-startup-id ~/.config/polybar/launch.sh &
+# Night shift
+exec_always --no-startup-id redshift -l $(curl -s "https://location.services.mozilla.com/v1/geolocate?key=geoclue" | jq -r '"\(.location.lat):\(.location.lng)"')
 
