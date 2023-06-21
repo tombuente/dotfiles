@@ -1,9 +1,6 @@
 [submodule ".config/alacritty/catppuccin"]
 	path = .config/alacritty/catppuccin
 	url = https://github.com/catppuccin/alacritty.git
-[submodule ".config/i3/i3"]
-	path = .config/i3/i3
-	url = https://github.com/catppuccin/i3
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = https://github.com/tombuente/nvim-dotfiles

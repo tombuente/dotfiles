@@ -26,6 +26,9 @@ alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 # cross compiler
 export PATH="$HOME/opt/cross/bin:$PATH"
 
+# Go
+export PATH="$PATH:$(go env GOPATH)/bin"
+
 alias cdp="cd ~/Documents/projects"
 
 echo '

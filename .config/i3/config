@@ -6,6 +6,8 @@ set $mod Mod4
 # See also https://wiki.archlinux.org/index.php/XDG_Autostart
 exec --no-startup-id dex --autostart --environment i3
 
+font pango:sans 8
+
 # Mouse+$mod to drag floating windows
 floating_modifier $mod
 
@@ -25,7 +27,7 @@ bindsym $mod+l focus right
 # Focus the parent container
 bindsym $mod+a focus parent
 
-# focus the child container
+# Focus the child container
 #bindsym $mod+d focus child
 
 # move focused window
@@ -37,10 +39,10 @@ bindsym $mod+Shift+l move right
 
 # Splitting
 
-# split in horizontal orientation
+# Split in horizontal orientation
 bindsym $mod+z split h
 
-# split in vertical orientation
+# Split in vertical orientation
 bindsym $mod+v split v
 
 
@@ -61,8 +63,8 @@ bindsym $mod+Shift+space floating toggle
 # Monitor and workspace
 
 # Get monitor info with `xrandr`
-set $monitor1 "DP-0"
-set $monitor2 "DP-2"
+set $monitor1 "DP-2"
+set $monitor2 "DP-0"
 
 # Workspace names
 set $ws1 "1"
@@ -131,7 +133,7 @@ bindsym $mod+r mode "resize"
 
 # Gaps
 #gaps inner 10
-#default_border pixel 2
+#default_border pixel 0
 #default_floating_border pixel 0
 
 # Reload the configuration file
