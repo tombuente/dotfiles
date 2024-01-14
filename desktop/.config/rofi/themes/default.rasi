@@ -64,4 +64,3 @@ element selected.active {
 element-text.active {
   text-color: @highlight-color;
 }
-
