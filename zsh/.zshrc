@@ -44,7 +44,8 @@ alias h="history | grep "
 # Package manager
 alias pacsyu='sudo pacman -Syu'
 alias pacsyyu='sudo pacman -Syyu'
-alias cleanup='sudo pacman -Rns $(pacman -Qtdq)' # Remove orphaned packages
+alias pacnum='pacman -Q | wc -l'
+alias pacrm='sudo pacman -Rns $(pacman -Qtdq)' # Remove orphaned packages
 
 # Get fastest mirror
 alias mirror='sudo reflector -f 30 -l 30 --number 6 --verbose --save /etc/pacman.d/mirrorlist'
