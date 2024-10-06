@@ -39,7 +39,12 @@ alias .....='cd ../../../..'
 alias bd='cd "$OLDPWD"'
 
 # Search history
-alias h="history | grep "
+alias h='history | grep '
+
+# Docker
+alias docker-stop-all='docker stop $(docker ps -a -q)'
+alias docker-rm-all='docker rm $(docker ps -a -q)'
+alias composed='docker compose up -d'
 
 # Package manager
 alias pacsyu='sudo pacman -Syu'
@@ -50,6 +55,7 @@ alias pacrm='sudo pacman -Rns $(pacman -Qtdq)' # Remove orphaned packages
 # Get fastest mirror
 alias mirror='sudo reflector -f 30 -l 30 --number 6 --verbose --save /etc/pacman.d/mirrorlist'
 
-# PATHc
-export PATH="$PATH:$HOME/opt/cross/bin"  # Cross compiler
-export PATH="$PATH:$(go env GOPATH)/bin" # Go
+# PATH
+export PATH="$PATH:$HOME/opt/cross/bin"     # Cross compiler
+export PATH="$PATH:$(go env GOPATH)/bin"    # Go
+export PATH="$PATH:$HOME/.config/emacs/bin" # Doom Emacs
