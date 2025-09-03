@@ -1,0 +1,26 @@
+* {
+    font-family: "monospace";
+    font-size: 16px;
+    color: #f6f1ea;
+}
+
+window#waybar {
+    background-color: #101010;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    margin: 2px 0;
+}
+
+.modules-right {
+    margin-right: 22px;
+}
+
+#workspaces button:hover {
+    background: none;
+    border: none;
+    border-color: transparent;
+    transition: none;
+}

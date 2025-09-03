@@ -5,6 +5,8 @@ autoload -Uz compinit; compinit
 autoload -Uz promptinit; promptinit
 autoload -Uz vcs_info
 
+setopt allexport
+
 setopt HIST_EXPIRE_DUPS_FIRST
 setopt HIST_IGNORE_DUPS
 setopt HIST_IGNORE_ALL_DUPS
@@ -21,9 +23,9 @@ precmd_functions+=( precmd_vcs_info )
 PROMPT='%F{cyan}[%2~]%f %F{blue}%#%f '
 RPROMPT='${vcs_info_msg_0_}'
 
-export EDITOR=vim
-export VISUAL=vim
-alias vi='vim'
+export EDITOR='emacsclient -c -t'
+export VISUAL='emacsclient -c'
+alias e=$EDITOR
 
 alias cp='cp -i'
 alias mv='mv -i'
@@ -51,6 +53,8 @@ alias pacsyu='sudo pacman -Syu'
 alias pacsyyu='sudo pacman -Syyu'
 alias pacnum='pacman -Q | wc -l'
 alias pacrm='sudo pacman -Rns $(pacman -Qtdq)' # Remove orphaned packages
+alias pacql='pacman -Ql'
+alias pacls='pacman -Qeq'
 
 # Get fastest mirror
 alias mirror='sudo reflector -f 30 -l 30 --number 6 --verbose --save /etc/pacman.d/mirrorlist'

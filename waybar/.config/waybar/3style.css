@@ -1,0 +1,59 @@
+@import "macchiato.css";
+
+* {
+
+    font-family: "monospace";
+    font-size: 16px;
+    color: @text;
+}
+
+window#waybar {
+    background: transparent;
+
+}
+
+tooltip {
+    background: @base;
+}
+
+.modules-left,
+.modules-center,
+.modules-right {
+    margin: 8px 0;
+    margin-top: 0;
+}
+
+#clock,
+#tray,
+#wireplumber,
+#workspaces {
+    background: @surface0;
+    margin: 0 8px;
+    padding: 6px 8px;
+    border-radius: 5px;
+}
+
+#workspaces {
+    background: transparent;
+    padding: 0;
+}
+
+#workspaces button {
+    background: @surface0;
+    margin-right: 8px;
+    padding: 0 10px;
+}
+
+#workspaces button:hover {
+    background: @overlay1;
+    border-radius: 5px;
+}
+
+#workspaces button.active {
+    background: @overlay1;
+    border-radius: 5px;
+}
+
+#workspaces button.urgent {
+    background: @red;
+}

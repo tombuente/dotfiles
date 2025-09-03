@@ -1,0 +1,49 @@
+{
+    "layer": "top",
+    "position": "bottom",
+    "modules-left": [
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "tray",
+        "wireplumber"
+    ],
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "on-click": "activate",
+        "on-click-right": "fullscreen",
+        "icon-theme": "WhiteSur",
+        "icon-size": 25,
+        "tooltip-format": "{title}"
+    },
+    "hyprland/workspaces": {
+        "on-click": "activate",
+        "format": "{icon}",
+        "format-icons": {
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "5": "5",
+            "6": "6",
+            "7": "7",
+            "8": "8",
+            "9": "9"
+        }
+    },
+    "tray": {},
+    "clock": {
+        "format": "{:%A %Y-%m-%d %H:%M}",
+        "tooltip": false
+    },
+    "wireplumber": {
+        "format": "Audio",
+        "tooltip-format": "Volume : {volume}%",
+        "format-muted": "Muted",
+        "on-click": "pamixer -t",
+        "scroll-step": 1
+    }
+}
